@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prandify — dispensa, spesa e ricette dal mondo</title>
+  <meta name="description" content="Prandify: la tua dispensa, la lista della spesa e ricette da tutto il mondo, con l'intelligenza artificiale sul telefono. Gratis, senza pubblicità.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <meta property="og:title" content="Prandify">
+  <meta property="og:description" content="Dispensa, spesa e ricette dal mondo, con l'IA sul tuo telefono.">
+  <meta property="og:image" content="https://prandify.com/img/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./"><img src="img/logo.svg" alt="" width="36" height="36"> Prandify</a>
+    <nav class="langs" aria-label="Language">
+      <button data-lang="it">IT</button><button data-lang="en">EN</button><button data-lang="tr">TR</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-logo" src="img/logo.svg" alt="Prandify" width="120" height="120">
+      <h1>Prandify</h1>
+      <p class="tagline" data-i18n="tagline"></p>
+      <p class="sub" data-i18n="sub"></p>
+      <div class="stores">
+        <a class="store disabled" aria-disabled="true"><span class="store-small" data-i18n="soon"></span><span class="store-big">Google Play</span></a>
+        <a class="store disabled" aria-disabled="true"><span class="store-small" data-i18n="soon"></span><span class="store-big">App Store</span></a>
+      </div>
+      <ul class="promises">
+        <li data-i18n="p1"></li><li data-i18n="p2"></li><li data-i18n="p3"></li>
+      </ul>
+    </section>
+
+    <section class="shots" aria-label="Screenshots">
+      <div class="phone"><img src="img/recipes.jpg" alt="" loading="lazy"></div>
+      <div class="phone"><img src="img/recipe.jpg" alt="" loading="lazy"></div>
+      <div class="phone"><img src="img/country.jpg" alt="" loading="lazy"></div>
+      <div class="phone"><img src="img/plan.jpg" alt="" loading="lazy"></div>
+      <div class="phone"><img src="img/shopping.jpg" alt="" loading="lazy"></div>
+    </section>
+
+    <section class="features">
+      <h2 data-i18n="featTitle"></h2>
+      <div class="grid">
+        <article><span>🧊</span><h3 data-i18n="f1t"></h3><p data-i18n="f1"></p></article>
+        <article><span>📲</span><h3 data-i18n="f2t"></h3><p data-i18n="f2"></p></article>
+        <article><span>🌍</span><h3 data-i18n="f3t"></h3><p data-i18n="f3"></p></article>
+        <article><span>✨</span><h3 data-i18n="f4t"></h3><p data-i18n="f4"></p></article>
+        <article><span>📅</span><h3 data-i18n="f5t"></h3><p data-i18n="f5"></p></article>
+        <article><span>🧾</span><h3 data-i18n="f6t"></h3><p data-i18n="f6"></p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="privacy.html" data-i18n="privacy"></a> · <a href="mailto:hello@prandify.com">hello@prandify.com</a></p>
+    <p class="small" data-i18n="off"></p>
+    <p class="small">© 2026 Prandify</p>
+  </footer>
+
+  <script>
+    const T = {
+      it: {
+        tagline: "La tua cucina, più semplice.",
+        sub: "Dispensa, lista della spesa e ricette da tutto il mondo, con l'intelligenza artificiale che gira sul tuo telefono.",
+        soon: "Presto su",
+        p1: "🚫 Niente pubblicità", p2: "🔒 I tuoi dati restano sul telefono", p3: "🌐 21 lingue",
+        featTitle: "Tutto quello che serve in cucina",
+        f1t: "Dispensa e scadenze", f1: "Aggiungi i prodotti con il codice a barre, una foto, scrivendo o a voce. Ti avvisa prima che scadano.",
+        f2t: "Ricette dai social", f2: "Condividi un reel di Instagram, TikTok o YouTube: Prandify legge ingredienti e passaggi e salva anche il video.",
+        f3t: "Cucine del mondo", f3: "Ricette dai siti di riferimento di ogni paese, tradotte nella tua lingua. Cerca anche in lingue diverse.",
+        f4t: "Consigliami un piatto", f4: "Idee veloci con quello che hai in casa, attente alle calorie e alle tue allergie.",
+        f5t: "Piano dei pasti", f5: "Colazione, pranzo, spuntino e cena, con le calorie del giorno e la spesa della settimana pronta.",
+        f6t: "Spesa e scontrini", f6: "Leggi lo scontrino: i prodotti vanno in dispensa e vedi quanto spendi ogni mese. Con le offerte dei supermercati.",
+        privacy: "Privacy",
+        off: "Dati dei prodotti: Open Food Facts (licenza ODbL)."
+      },
+      en: {
+        tagline: "Your kitchen, made simple.",
+        sub: "Pantry, shopping list and recipes from around the world, with artificial intelligence running on your phone.",
+        soon: "Coming soon on",
+        p1: "🚫 No ads", p2: "🔒 Your data stays on your phone", p3: "🌐 21 languages",
+        featTitle: "Everything your kitchen needs",
+        f1t: "Pantry & expiry dates", f1: "Add products by barcode, photo, typing or voice. It reminds you before they expire.",
+        f2t: "Recipes from social media", f2: "Share an Instagram, TikTok or YouTube post: Prandify reads the ingredients and steps and keeps the video too.",
+        f3t: "World cuisines", f3: "Recipes from each country's reference sites, translated into your language. Search in any language.",
+        f4t: "Suggest a dish", f4: "Quick ideas with what you have at home, mindful of calories and your allergies.",
+        f5t: "Meal plan", f5: "Breakfast, lunch, snack and dinner, with the day's calories and the week's shopping list ready.",
+        f6t: "Shopping & receipts", f6: "Scan a receipt: products go into your pantry and you see what you spend each month. With supermarket offers.",
+        privacy: "Privacy",
+        off: "Product data: Open Food Facts (ODbL licence)."
+      },
+      tr: {
+        tagline: "Mutfağın, daha kolay.",
+        sub: "Kiler, alışveriş listesi ve dünyanın dört bir yanından tarifler; yapay zekâ doğrudan telefonunda çalışır.",
+        soon: "Yakında",
+        p1: "🚫 Reklam yok", p2: "🔒 Verilerin telefonunda kalır", p3: "🌐 21 dil",
+        featTitle: "Mutfakta ihtiyacın olan her şey",
+        f1t: "Kiler ve son kullanma tarihleri", f1: "Ürünleri barkodla, fotoğrafla, yazarak ya da sesle ekle. Bozulmadan önce hatırlatır.",
+        f2t: "Sosyal medyadan tarifler", f2: "Instagram, TikTok veya YouTube paylaşımını gönder: Prandify malzemeleri ve adımları okur, videoyu da saklar.",
+        f3t: "Dünya mutfakları", f3: "Her ülkenin başlıca sitelerinden tarifler, kendi dilinde. İstediğin dilde ara.",
+        f4t: "Bana bir yemek öner", f4: "Evdekilerle hızlı fikirler; kalorine ve alerjilerine dikkat eder.",
+        f5t: "Yemek planı", f5: "Kahvaltı, öğle, ara öğün ve akşam; günün kalorisi ve haftanın alışveriş listesi hazır.",
+        f6t: "Alışveriş ve fişler", f6: "Fişi okut: ürünler kilere geçer, her ay ne kadar harcadığını görürsün. Market indirimleriyle.",
+        privacy: "Gizlilik",
+        off: "Ürün verileri: Open Food Facts (ODbL lisansı)."
+      }
+    };
+    function setLang(l) {
+      const t = T[l] || T.en;
+      document.documentElement.lang = l;
+      document.querySelectorAll('[data-i18n]').forEach(e => { e.textContent = t[e.dataset.i18n] || ''; });
+      document.querySelectorAll('.langs button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
+      try { localStorage.setItem('lang', l); } catch (_) {}
+    }
+    document.querySelectorAll('.langs button').forEach(b => b.onclick = () => setLang(b.dataset.lang));
+    let saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (_) {}
+    const nav = (navigator.language || 'en').slice(0, 2);
+    setLang(saved || (T[nav] ? nav : 'en'));
+  </script>
+</body>
+</html>
