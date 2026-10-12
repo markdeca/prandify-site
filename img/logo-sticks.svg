@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B8EBC0"/><stop offset="1" stop-color="#5DBB7A"/>
+    </linearGradient>
+    <radialGradient id="plate" cx="0.45" cy="0.38" r="0.75">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFF0DC"/>
+    </radialGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7CCB63"/><stop offset="1" stop-color="#2F8A46"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D49A68"/><stop offset="1" stop-color="#A86E43"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="230" fill="url(#bg)"/>
+
+  <!-- germoglio attaccato al piatto, a mezzogiorno -->
+  <path d="M512 232 C512 205 512 190 512 172" stroke="#2F8A46" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M512 192 C460 194 410 162 396 102 C460 92 510 132 512 192 Z" fill="url(#leaf)"/>
+  <path d="M512 176 C566 176 620 138 636 72 C566 64 514 108 512 176 Z" fill="url(#leaf)"/>
+
+  <!-- piatto = quadrante, con ombra morbida -->
+  <circle cx="512" cy="552" r="318" fill="#2E7D4F" opacity="0.18"/>
+  <circle cx="512" cy="536" r="318" fill="url(#plate)"/>
+  <circle cx="512" cy="536" r="250" fill="none" stroke="#F6DFC4" stroke-width="16"/>
+
+  <!-- guance rosate: il piatto sorride -->
+  <ellipse cx="372" cy="650" rx="40" ry="24" fill="#FFB4A2" opacity="0.7"/>
+  <ellipse cx="652" cy="650" rx="40" ry="24" fill="#FFB4A2" opacity="0.7"/>
+
+  <!-- bacchette -->
+  <g transform="rotate(-58 512 536)">
+    <path d="M492 590 Q492 604 512 604 Q532 604 532 590 L522 335 Q512 321 502 335 Z" fill="url(#wood)"/>
+    <rect x="493" y="470" width="38" height="22" rx="6" fill="#F27052"/>
+    <rect x="495" y="500" width="34" height="8" rx="4" fill="#F27052" opacity="0.8"/>
+  </g>
+  <g transform="rotate(52 512 536)">
+    <path d="M492 590 Q492 604 512 604 Q532 604 532 590 L522 275 Q512 261 502 275 Z" fill="url(#wood)"/>
+    <rect x="493" y="470" width="38" height="22" rx="6" fill="#F27052"/>
+    <rect x="495" y="500" width="34" height="8" rx="4" fill="#F27052" opacity="0.8"/>
+  </g>
+
+  <!-- perno -->
+  <circle cx="512" cy="536" r="36" fill="#F27052"/>
+  <circle cx="512" cy="536" r="14" fill="#FFF6EA"/>
+</svg>

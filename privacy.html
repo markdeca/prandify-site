@@ -10,9 +10,9 @@
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="./"><img src="img/logo.svg" alt="" width="36" height="36"> Prandify</a>
+    <a class="brand" href="./"><img class="brand-logo" src="img/logo.svg" alt="" width="36" height="36"> Prandify</a>
     <nav class="langs" aria-label="Language">
-      <button data-lang="it">IT</button><button data-lang="en">EN</button><button data-lang="tr">TR</button>
+      <button data-lang="it">IT</button><button data-lang="en">EN</button><button data-lang="tr">TR</button><button data-lang="zh">中文</button><button data-lang="ja">日本語</button><button data-lang="ko">한국어</button>
     </nav>
   </header>
 
@@ -155,9 +155,13 @@
 
   <script>
     function setLang(l) {
-      if (!document.querySelector('[data-doc="' + l + '"]')) l = 'en';
-      document.documentElement.lang = l;
-      document.querySelectorAll('[data-doc]').forEach(a => { a.hidden = a.dataset.doc !== l; });
+      if (!['it', 'en', 'tr', 'zh', 'ja', 'ko'].includes(l)) l = 'en';
+      // Cinese, giapponese e coreano: informativa in inglese, logo con le bacchette.
+      const doc = document.querySelector('[data-doc="' + l + '"]') ? l : 'en';
+      document.documentElement.lang = doc;
+      document.querySelectorAll('[data-doc]').forEach(a => { a.hidden = a.dataset.doc !== doc; });
+      const sticks = ['zh', 'ja', 'ko'].includes(l);
+      document.querySelectorAll('.brand-logo').forEach(i => { i.src = sticks ? 'img/logo-sticks.svg' : 'img/logo.svg'; });
       document.querySelectorAll('.langs button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
       try { localStorage.setItem('lang', l); } catch (_) {}
     }
