@@ -14,9 +14,9 @@
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="./"><img src="img/logo.svg" alt="" width="36" height="36"> Prandify</a>
+    <a class="brand" href="./"><img class="brand-logo" src="img/logo.svg" alt="" width="36" height="36"> Prandify</a>
     <nav class="langs" aria-label="Language">
-      <button data-lang="it">IT</button><button data-lang="en">EN</button><button data-lang="tr">TR</button>
+      <button data-lang="it">IT</button><button data-lang="en">EN</button><button data-lang="tr">TR</button><button data-lang="zh">中文</button><button data-lang="ja">日本語</button><button data-lang="ko">한국어</button>
     </nav>
   </header>
 
@@ -33,6 +33,9 @@
     <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#7CCB63"/><stop offset="1" stop-color="#2F8A46"/>
     </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D49A68"/><stop offset="1" stop-color="#A86E43"/>
+    </linearGradient>
   </defs>
   <rect width="1024" height="1024" rx="230" fill="url(#bg)"/>
   <path d="M512 232 C512 205 512 190 512 172" stroke="#2F8A46" stroke-width="20" fill="none" stroke-linecap="round"/>
@@ -43,6 +46,7 @@
   <circle cx="512" cy="536" r="250" fill="none" stroke="#F6DFC4" stroke-width="16"/>
   <ellipse cx="372" cy="650" rx="40" ry="24" fill="#FFB4A2" opacity="0.7"/>
   <ellipse cx="652" cy="650" rx="40" ry="24" fill="#FFB4A2" opacity="0.7"/>
+  <g class="set set-cutlery">
   <g class="hand hand-fork"><g transform="rotate(-58 512 536)" fill="#F27052">
     <rect x="494" y="390" width="36" height="150" rx="18"/>
     <path d="M466 318 h92 v52 q0 46 -46 46 q-46 0 -46 -46 z"/>
@@ -59,6 +63,19 @@
     <ellipse cx="512" cy="370" rx="52" ry="66"/>
     <ellipse cx="500" cy="356" rx="16" ry="24" fill="#FFF3D6" opacity="0.7"/>
   </g></g>
+  </g>
+  <g class="set set-sticks">
+  <g class="hand hand-s1"><g transform="rotate(-58 512 536)">
+    <path d="M492 590 Q492 604 512 604 Q532 604 532 590 L522 335 Q512 321 502 335 Z" fill="url(#wood)"/>
+    <rect x="493" y="470" width="38" height="22" rx="6" fill="#F27052"/>
+    <rect x="495" y="500" width="34" height="8" rx="4" fill="#F27052" opacity="0.8"/>
+  </g></g>
+  <g class="hand hand-s2"><g transform="rotate(52 512 536)">
+    <path d="M492 590 Q492 604 512 604 Q532 604 532 590 L522 275 Q512 261 502 275 Z" fill="url(#wood)"/>
+    <rect x="493" y="470" width="38" height="22" rx="6" fill="#F27052"/>
+    <rect x="495" y="500" width="34" height="8" rx="4" fill="#F27052" opacity="0.8"/>
+  </g></g>
+  </g>
   <circle cx="512" cy="536" r="36" fill="#F27052"/>
   <circle cx="512" cy="536" r="14" fill="#FFF6EA"/>
 </svg></div>
@@ -147,11 +164,73 @@
         f6t: "Alışveriş ve fişler", f6: "Fişi okut: ürünler kilere geçer, her ay ne kadar harcadığını görürsün. Market indirimleriyle.",
         privacy: "Gizlilik",
         off: "Ürün verileri: Open Food Facts (ODbL lisansı)."
+      },
+      zh: {
+        tagline: "让厨房更简单。",
+        sub: "食品储藏、购物清单和来自世界各地的食谱，人工智能直接在你的手机上运行。",
+        soon: "即将上架",
+        p1: "🚫 无广告", p2: "🔒 数据保存在你的手机上", p3: "🌐 21 种语言",
+        featTitle: "厨房所需，一应俱全",
+        f1t: "储藏与保质期", f1: "扫描条形码、拍照、打字或语音添加食品。过期前会提醒你。",
+        f2t: "来自社交媒体的食谱", f2: "分享 Instagram、TikTok 或 YouTube 内容：Prandify 读取食材和步骤，还会保存视频。",
+        f3t: "世界美食", f3: "来自各国权威网站的食谱，翻译成你的语言。可用任何语言搜索。",
+        f4t: "给我推荐一道菜", f4: "用家里现有的食材快速获得灵感，兼顾卡路里和你的过敏原。",
+        f5t: "膳食计划", f5: "早餐、午餐、加餐和晚餐，附每日卡路里，一周的购物清单也已备好。",
+        f6t: "购物与小票", f6: "扫描小票：商品自动进入储藏，每月花费一目了然。还有超市优惠。",
+        privacy: "隐私",
+        off: "产品数据：Open Food Facts（ODbL 许可）。"
+      },
+      ja: {
+        tagline: "キッチンを、もっとシンプルに。",
+        sub: "食品ストック、買い物リスト、世界中のレシピ。AI はあなたのスマホの中で動きます。",
+        soon: "近日公開",
+        p1: "🚫 広告なし", p2: "🔒 データはスマホの中だけ", p3: "🌐 21 言語",
+        featTitle: "キッチンに必要なすべてを",
+        f1t: "ストックと賞味期限", f1: "バーコード、写真、入力、音声で食品を追加。期限が切れる前にお知らせします。",
+        f2t: "SNS からレシピ", f2: "Instagram・TikTok・YouTube の投稿を共有するだけ。Prandify が材料と手順を読み取り、動画も保存します。",
+        f3t: "世界の料理", f3: "各国の定番サイトのレシピを、あなたの言語に翻訳。どの言語でも検索できます。",
+        f4t: "おすすめの一品", f4: "家にある食材ですぐ作れるアイデアを。カロリーとアレルギーにも配慮します。",
+        f5t: "献立プラン", f5: "朝食・昼食・間食・夕食を、1日のカロリーと1週間分の買い物リスト付きで。",
+        f6t: "買い物とレシート", f6: "レシートを読み取れば商品がストックに。毎月の出費もわかります。スーパーのお得情報も。",
+        privacy: "プライバシー",
+        off: "商品データ：Open Food Facts（ODbL ライセンス）"
+      },
+      ko: {
+        tagline: "주방을 더 간단하게.",
+        sub: "식품 보관함, 장보기 목록, 전 세계 레시피까지. 인공지능이 휴대폰에서 직접 작동합니다.",
+        soon: "출시 예정",
+        p1: "🚫 광고 없음", p2: "🔒 데이터는 휴대폰에만 저장", p3: "🌐 21개 언어",
+        featTitle: "주방에 필요한 모든 것",
+        f1t: "보관함과 유통기한", f1: "바코드, 사진, 입력 또는 음성으로 식품을 추가하세요. 유통기한 전에 알려 드립니다.",
+        f2t: "SNS 레시피", f2: "Instagram, TikTok, YouTube 게시물을 공유하면 Prandify가 재료와 조리 과정을 읽고 영상도 저장합니다.",
+        f3t: "세계 요리", f3: "각 나라 대표 사이트의 레시피를 내 언어로 번역해 드립니다. 어떤 언어로도 검색할 수 있어요.",
+        f4t: "요리 추천", f4: "집에 있는 재료로 빠르게 만들 수 있는 아이디어. 칼로리와 알레르기도 고려합니다.",
+        f5t: "식단 계획", f5: "아침, 점심, 간식, 저녁을 하루 칼로리와 함께. 일주일 장보기 목록도 준비됩니다.",
+        f6t: "장보기와 영수증", f6: "영수증을 스캔하면 상품이 보관함으로 들어가고 매달 지출을 확인할 수 있어요. 마트 할인 정보도 함께.",
+        privacy: "개인정보",
+        off: "제품 데이터: Open Food Facts (ODbL 라이선스)"
       }
     };
+    // Cinese, giapponese e coreano: il logo con le bacchette. Cambiando,
+    // le lancette rifanno il loro giro.
+    const STICKS = ['zh', 'ja', 'ko'];
+    function setLogo(l) {
+      const sticks = STICKS.includes(l);
+      const svg = document.querySelector('.logo-anim');
+      const changed = svg.classList.contains('sticks') !== sticks;
+      svg.classList.toggle('sticks', sticks);
+      document.querySelectorAll('.brand-logo').forEach(i => { i.src = sticks ? 'img/logo-sticks.svg' : 'img/logo.svg'; });
+      if (changed && setLogo.ready) {
+        svg.querySelectorAll('.hand').forEach(h => { h.style.animation = 'none'; });
+        svg.getBoundingClientRect();
+        svg.querySelectorAll('.hand').forEach(h => { h.style.animation = ''; });
+      }
+      setLogo.ready = true;
+    }
     function setLang(l) {
       const t = T[l] || T.en;
       document.documentElement.lang = l;
+      setLogo(l);
       document.querySelectorAll('[data-i18n]').forEach(e => { e.textContent = t[e.dataset.i18n] || ''; });
       document.querySelectorAll('.langs button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
       try { localStorage.setItem('lang', l); } catch (_) {}

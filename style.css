@@ -22,11 +22,17 @@ a { color: var(--accent); }
   max-width: 1080px; margin: 0 auto; padding: 16px;
 }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; color: var(--text); text-decoration: none; }
+.langs { display: flex; flex-wrap: wrap; justify-content: flex-end; }
 .langs button {
   border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 700;
   padding: 6px 8px; border-radius: 8px; cursor: pointer;
 }
 .langs button.on { background: var(--card); color: var(--text); }
+@media (max-width: 600px) {
+  .top { flex-wrap: wrap; gap: 6px; }
+  .langs { width: 100%; justify-content: center; }
+  .langs button { padding: 4px 7px; }
+}
 
 .hero { max-width: 720px; margin: 0 auto; padding: 24px 16px 8px; text-align: center; }
 .hero-logo { width: 132px; height: 132px; margin: 0 auto; filter: drop-shadow(0 10px 20px rgba(46, 125, 79, .25)); }
@@ -36,6 +42,11 @@ a { color: var(--accent); }
 .logo-anim .hand-fork { animation-duration: 2.2s; }
 .logo-anim .hand-knife { animation-duration: 1.8s; animation-name: spin2; }
 .logo-anim .hand-spoon { animation-duration: 1.4s; animation-name: spin3; }
+.logo-anim .hand-s1 { animation-duration: 2s; }
+.logo-anim .hand-s2 { animation-duration: 1.6s; animation-name: spin2; }
+/* Posate o bacchette (cinese, giapponese, coreano). */
+.logo-anim .set-sticks, .logo-anim.sticks .set-cutlery { display: none; }
+.logo-anim.sticks .set-sticks { display: inline; }
 @keyframes spin { from { transform: rotate(-360deg); } to { transform: rotate(0); } }
 @keyframes spin2 { from { transform: rotate(-720deg); } to { transform: rotate(0); } }
 @keyframes spin3 { from { transform: rotate(-1080deg); } to { transform: rotate(0); } }
