@@ -22,17 +22,24 @@ a { color: var(--accent); }
   max-width: 1080px; margin: 0 auto; padding: 16px;
 }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; color: var(--text); text-decoration: none; }
-.langs { display: flex; flex-wrap: wrap; justify-content: flex-end; }
-.langs button {
-  border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 700;
-  padding: 6px 8px; border-radius: 8px; cursor: pointer;
+.langs { position: relative; }
+.lang-toggle {
+  display: flex; align-items: center; gap: 6px; border: 0; cursor: pointer;
+  background: var(--card); color: var(--text); font: inherit; font-weight: 700; font-size: 15px;
+  padding: 7px 12px; border-radius: 999px;
 }
-.langs button.on { background: var(--card); color: var(--text); }
-@media (max-width: 600px) {
-  .top { flex-wrap: wrap; gap: 6px; }
-  .langs { width: 100%; justify-content: center; }
-  .langs button { padding: 4px 7px; }
+.lang-menu {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 10; min-width: 160px;
+  display: flex; flex-direction: column; padding: 6px; border-radius: 14px;
+  background: var(--bg); box-shadow: 0 10px 30px rgba(0, 0, 0, .18); border: 1px solid var(--card);
 }
+.lang-menu[hidden] { display: none; }
+.lang-menu button {
+  border: 0; background: transparent; color: var(--text); font: inherit; font-size: 16px;
+  text-align: left; padding: 9px 12px; border-radius: 10px; cursor: pointer;
+}
+.lang-menu button:hover { background: var(--card); }
+.lang-menu button.on { background: var(--card); font-weight: 700; }
 
 .hero { max-width: 720px; margin: 0 auto; padding: 24px 16px 8px; text-align: center; }
 .hero-logo { width: 132px; height: 132px; margin: 0 auto; filter: drop-shadow(0 10px 20px rgba(46, 125, 79, .25)); }
